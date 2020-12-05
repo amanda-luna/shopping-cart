@@ -1,0 +1,44 @@
+ ~ % mkdir github
+ ~ % cd github
+ github % mkdir shopping-cart
+ github % cd shopping-cart
+ shopping-cart % git init
+ shopping-cart % git remote add origin https://github.com/amanda-luna/shopping-cart.git
+ shopping-cart % echo "# shopping-cart" >> README.md
+ shopping-cart % git add README.md
+ shopping-cart % git commit -m "base commit"
+ shopping-cart % mkdir src
+ shopping-cart % cd src
+ src % cp -a /Users/amandaluna/College/"Tools and Automation"/"Assignment 1"/ex-9-shopping-cart/. /Users/amandaluna/github/shopping-cart/src
+ src % git add*
+ src % git commit -m"Adding files"
+ src % git push origin master
+ src % npm init --yes
+ src % npm i --save-dev gulp
+ shopping-cart % gulp default
+ shopping-cart % npm install gulp-concat
+ shopping-cart % npm install gulp-minify
+ shopping-cart % npm i gulp-clean-css
+ shopping-cart % npm install gulp-sourcemaps
+ shopping-cart % npm install --save-dev gulp-imagemin
+ shopping-cart % git add gulpfile.js
+ shopping-cart % git add package.json
+ shopping-cart % git add package-lock.json
+ shopping-cart % git commit -m "Adding gulpfile"
+ shopping-cart % git push origin master
+ shopping-cart % git checkout -b colour-change
+ shopping-cart % git add src/css/new_colors.css
+ shopping-cart % git add src/index.html
+ shopping-cart % git commit -m "Change 3 css colors"
+ shopping-cart % git checkout master
+ shopping-cart % git push origin master
+ shopping-cart % git checkout -b "alert_cart"
+ shopping-cart % git add src/js/main.js
+ shopping-cart % git commit -m "Creating alert feature"
+ shopping-cart % git push origin alert_cart
+ shopping-cart % git checkout master
+ shopping-cart % git pull
+ shopping-cart % git merge alert_cart
+ shopping-cart % git push origin master
+ shopping-cart % git branch -d alert_cart
+ shopping-cart % git branch -d colour-change
