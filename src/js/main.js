@@ -88,6 +88,7 @@ courseList.addEventListener('click', function(e) {
   if (e.target.id == 'add-to-cart' && e.target) {
     const li = e.target.closest('li');
     cart.addCourse(li.dataset.courseId);
+    alert ('Thank you for shopping with us');
   }
 });
 
